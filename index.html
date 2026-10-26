@@ -1,0 +1,37 @@
+<img src="https://ibb.co/qLx2K8Xm" alt="Баннер ролевой" class="project-banner">
+
+<div class="header">
+    <h2 id="username" style="margin: 0; font-size: 20px;">Личный кабинет</h2>
+    <p style="color: #94a3b8; font-size: 13px; margin: 4px 0 0 0;">Банк вашей ролевой</p>
+</div>
+
+<div class="balance-card">
+    <div style="font-size: 14px; color: #94a3b8;">Ваш баланс:</div>
+    <div class="balance-amount"><span id="balance">150</span> 🪙</div>
+</div>
+
+<h3>🏆 Доступные достижения</h3>
+<div class="achievements-list">
+    <div class="achievement-item">
+        <div class="achievement-info">
+            <div>Первый пост в ролевой</div>
+            <div>Написать вступительный пост</div>
+        </div>
+        <div class="reward">+50 🪙</div>
+    </div>
+    <div class="achievement-item">
+        <div class="achievement-info">
+            <div>Активный участник</div>
+            <div>Сделать 10 постов за неделю</div>
+        </div>
+        <div class="reward">+100 🪙</div>
+    </div>
+</div>
+
+<script>
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+    if (tg.initDataUnsafe && tg.initDataUnsafe.user) {
+        document.getElementById('username').innerText = `Игрок: ${tg.initDataUnsafe.user.first_name}`;
+    }
+</script>
